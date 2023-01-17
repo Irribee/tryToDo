@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
+
 @Data
 public class Task {
 
@@ -14,6 +15,15 @@ public class Task {
     GregorianCalendar date;
     String text;
     String status;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
 
     @Override
     public String toString() {

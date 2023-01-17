@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.GregorianCalendar;
 
-@RequestMapping ("/newTask")
+@RequestMapping("/newTask")
 public class TaskController {
     Task task;
     private GregorianCalendar date;
