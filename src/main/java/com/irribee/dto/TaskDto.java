@@ -1,14 +1,14 @@
-package web;
+package com.irribee.dto;
 
 import lombok.Data;
 
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.Scanner;
 
+/**
+ * Data Transfer Object объект для получения и передачи через URL(например Postman)
+ */
 @Data
-public class Task {
+public class TaskDto {
 
     static int nextId = 1;
     int id;
@@ -24,9 +24,9 @@ public class Task {
         this.status = status;
     }
 
-
     @Override
     public String toString() {
         return getId() + getText();
     }
+
 }
