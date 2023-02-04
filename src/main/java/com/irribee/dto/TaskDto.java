@@ -20,6 +20,38 @@ public class TaskDto {
         return status;
     }
 
+    public static void setNextId(int nextId) {
+        TaskDto.nextId = nextId;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setDate(GregorianCalendar date) {
+        this.date = date;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public static int getNextId() {
+        return nextId;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public GregorianCalendar getDate() {
+        return date;
+    }
+
+    public String getText() {
+        return text;
+    }
+
     public void setStatus(String status) {
         this.status = status;
     }
