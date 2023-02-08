@@ -13,6 +13,10 @@ public class ToDoRepository {
     private static final Map<Integer, TaskDto> toDoMap = new HashMap<>();//до этого был TaskEntity
     TaskDto taskDto;
 
+    public static Map<Integer, TaskDto> getToDoMap() {
+        toDoMap.put(1, new TaskDto());
+    }
+
     public TaskDto findById(int id) {
         TaskDto taskById;
         if (toDoMap.containsKey(id)) {
@@ -29,9 +33,12 @@ public class ToDoRepository {
         return taskDeleteById;
     }
 
+    public TaskDto allTasks() {
+        TaskDto listTask = (TaskDto) toDoMap.values();
+        return listTask;
 
 
-}
+    }
 
 //    public Optional<TaskEntity> findById(int id) {
 //        return Optional.ofNullable(toDoMap.get(id));

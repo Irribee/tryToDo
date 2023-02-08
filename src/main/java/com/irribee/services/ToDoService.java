@@ -6,8 +6,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.util.GregorianCalendar;
-
 @RequiredArgsConstructor
 @Service
 @Slf4j
@@ -23,21 +21,15 @@ public class ToDoService {
         return taskDto;
     }
 
-    public TaskDto addNewTask(int id, String text, GregorianCalendar date, String status) {
-        taskDto.setId(id);
-        taskDto.setText(text);
-        taskDto.setDate(date);
-        taskDto.setStatus(status);
-        return taskDto;
-    }
 
     public void removeTask(int id) {
         toDoRepository.removeTaskById(id);
     }
 
-    public TaskDto listTask(TaskDto allTask){
-
+    public TaskDto listTask(TaskDto allTask) {
+        toDoRepository.
     }
+}
 //        Optional<TaskEntity> taskEntityOptional = toDoRepository.findById(id); // найдена задача, соответствующая id
 //        TaskEntity taskEntity = null;
 //        if (taskEntityOptional.isPresent()) {
