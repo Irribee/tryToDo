@@ -13,8 +13,9 @@ public class ToDoRepository {
     private static final Map<Integer, TaskDto> toDoMap = new HashMap<>();//до этого был TaskEntity
     TaskDto taskDto;
 
-    public static Map<Integer, TaskDto> getToDoMap() {
+    static {
         toDoMap.put(1, new TaskDto());
+        toDoMap.put(3,new TaskDto());
     }
 
     public TaskDto findById(int id) {

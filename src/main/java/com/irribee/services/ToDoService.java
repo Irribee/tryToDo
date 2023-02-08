@@ -27,7 +27,8 @@ public class ToDoService {
     }
 
     public TaskDto listTask(TaskDto allTask) {
-        toDoRepository.
+       TaskDto tasks= toDoRepository.allTasks();
+        return tasks;
     }
 }
 //        Optional<TaskEntity> taskEntityOptional = toDoRepository.findById(id); // найдена задача, соответствующая id
@@ -47,4 +48,4 @@ public class ToDoService {
 //
 //        return savedTaskDto;
 //    }
-}
+
