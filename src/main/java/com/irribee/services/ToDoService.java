@@ -27,7 +27,7 @@ public class ToDoService {
     }
 
     public TaskDto listTask(TaskDto allTask) {
-       TaskDto tasks= toDoRepository.allTasks();
+        TaskDto tasks = toDoRepository.allTasks();
         return tasks;
     }
 }

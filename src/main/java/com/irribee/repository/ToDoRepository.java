@@ -15,7 +15,7 @@ public class ToDoRepository {
 
     static {
         toDoMap.put(1, new TaskDto());
-        toDoMap.put(3,new TaskDto());
+        toDoMap.put(3, new TaskDto());
     }
 
     public TaskDto findById(int id) {
