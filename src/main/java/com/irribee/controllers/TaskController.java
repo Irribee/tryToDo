@@ -14,20 +14,20 @@ public class TaskController {
 
     @PostMapping("/text")
     public String newText() {
-        taskService.getText();
-        return "";//templates
+        String text = taskService.getText();
+        return text;//templates
     }
 
     @PostMapping("/date")
     public GregorianCalendar newDate() {
-        taskService.getDate();
-        return "";//templates
+        GregorianCalendar date = taskService.getDate();
+        return date;//templates
     }
 
     @PostMapping("/status")
     public String newStatus() {
-        taskService.getStatus();
-        return n"";//templates
+        String status = taskService.getStatus();
+        return status;//templates
     }
 
 }
