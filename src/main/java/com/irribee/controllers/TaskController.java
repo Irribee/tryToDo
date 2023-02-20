@@ -15,19 +15,19 @@ public class TaskController {
     @PostMapping("/text")
     public String newText() {
         taskService.getText();
-        return newText();
+        return "";//templates
     }
 
     @PostMapping("/date")
     public GregorianCalendar newDate() {
         taskService.getDate();
-        return newDate();
+        return "";//templates
     }
 
     @PostMapping("/status")
     public String newStatus() {
         taskService.getStatus();
-        return newStatus();
+        return n"";//templates
     }
 
 }
