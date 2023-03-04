@@ -1,31 +1,33 @@
 package com.irribee.controllers;
 
-import com.irribee.dto.TaskDto;
-import org.springframework.web.bind.annotation.PathVariable;
+import com.irribee.services.TaskService;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.GregorianCalendar;
 
+@Controller
 @RequestMapping("/newTask")
 public class TaskController {
-    TaskDto taskDto;
-    private GregorianCalendar date;
+    TaskService taskService;
 
     @PostMapping("/text")
-    public void newText(@PathVariable String text) {
-        taskDto.setText(text);
+    public String newText() {
+        String text = taskService.getText();
+        return text;//templates
     }
 
     @PostMapping("/date")
-    public void newDate(@PathVariable GregorianCalendar date) {
-        this.date = date;
-        taskDto.setDate(date);
+    public GregorianCalendar newDate() {
+        GregorianCalendar date = taskService.getDate();
+        return date;//templates
     }
 
     @PostMapping("/status")
-    public void newStatus(@PathVariable String status) {
-        taskDto.setStatus("новая");
+    public String newStatus() {
+        String status = taskService.getStatus();
+        return status;//templates
     }
 
 }
